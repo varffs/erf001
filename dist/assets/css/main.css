@@ -178,7 +178,6 @@ footer#bottom {
   position: fixed;
   left: 20px;
   right: 20px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
@@ -195,7 +194,6 @@ header#top .nosupportalert {
   font-size: 14px;
   line-height: 1.5em;
   letter-spacing: 0.1em;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
