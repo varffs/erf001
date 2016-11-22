@@ -159,7 +159,6 @@ canvas {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: background-color 1s;
   transition: background-color 1s;
   background-color: rgba(0,0,0,0.99);
 }
@@ -178,7 +177,6 @@ footer#bottom {
   position: fixed;
   left: 20px;
   right: 20px;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
   z-index: 9999;
@@ -194,7 +192,6 @@ header#top .nosupportalert {
   font-size: 14px;
   line-height: 1.5em;
   letter-spacing: 0.1em;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
   margin-bottom: 0.5em;
