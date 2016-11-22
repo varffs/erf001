@@ -1,16 +1,19 @@
-var gulp = require('gulp'),
-	stylus = require('gulp-stylus');
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    rename = require('gulp-rename'),
-    clean = require('gulp-clean'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    connect = require('gulp-connect'),
+var gulp = require('gulp');
+
+var stylus = require('gulp-stylus');
+var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+
+var jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
+
+var imagemin = require('gulp-imagemin');
+var rename = require('gulp-rename');
+var clean = require('gulp-clean');
+var concat = require('gulp-concat');
+var notify = require('gulp-notify');
+var cache = require('gulp-cache');
+var connect = require('gulp-connect');
 
 /* SERVER */
 
@@ -33,10 +36,10 @@ gulp.task('html', function () {
 gulp.task('styles', function() {
   return gulp.src('src/css/main.styl')
     .pipe(stylus())
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(connect.reload())
     .pipe(notify({ message: 'Styles task complete' }));
